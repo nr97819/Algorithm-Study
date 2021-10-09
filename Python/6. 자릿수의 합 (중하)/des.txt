@@ -1,2 +1,12 @@
 import math
 math.floor() : 내림 연산
+
+temp=m.floor(temp/10)
+temp//10
+*둘이 같은 기능이다.
+
+*** 문자열로 변환 후 처리방법 ***
+def digit_sum():
+    sum=0
+    for i in str(x):
+        sum+=
