@@ -1,0 +1,32 @@
+[1] 오브젝트(Object)
+    구조체(struct) 처럼 내부에 여러 변수를 가질 수 있고, 
+    클래스(class)처럼 내부에 메소드를 포함하고 있는 형식이다. 
+
+    JSON(JavaScript Object Notation)과 유사하지만, 엄연히 다른 개념이다.
+    * Json -> 확장자도 있는 텍스트 파일
+    * JavaScript Object -> JavaScript에서만 지원하는 특정 자료형
+
+    * 또한 표기법에도 차이가 있다.
+
+    [JavaScript Object 문법]
+    let obj = {
+        name: "David"
+        age: function(){
+            return 10;
+        }
+    }
+
+    [JSON 문법] (에러)
+    {
+        "name": "David",
+        age: function{ <- 함수를 값으로 할당할 수 없다.
+            return 10;
+        }
+    }
+
+    {
+        name: "David", <- 프로퍼티명은 반드시 "문자열" 이어야 한다.
+        age: 10
+    }
+
+[2] 
