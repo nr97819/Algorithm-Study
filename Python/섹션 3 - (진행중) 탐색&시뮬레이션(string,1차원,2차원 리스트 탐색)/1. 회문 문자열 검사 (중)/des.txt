@@ -1,0 +1,9 @@
+* 처음에 잘못 했던 것
+arr=list(map(str,input().split()))
+
+** 오해하고 고쳤는데 또 틀렸던 것
+arr=list(input().split())
+
+*** 문제에서 원하는 것 (참고 : https://johnyejin.tistory.com/62)
+arr=[input() for _ in range(n)]
+내가 따라한 것
