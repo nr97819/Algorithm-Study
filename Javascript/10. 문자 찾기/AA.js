@@ -2,12 +2,6 @@
 function solution(num){
     let answer
     
-    if(num%12==0){
-        answer=parseInt(num/12)
-    }
-    else{
-        answer=parseInt(num/12)+1
-    }
     
     return answer
 }
