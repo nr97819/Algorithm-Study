@@ -2,3 +2,9 @@ for(let x of str){
     console.log(x)
 }
 문자열을 문자 하나씩 출력하는 방법
+
+for(let x of s){
+    //let num=x.charCodeAt();
+    //if(num>=65 && num<=90) answer++;
+    if(x===x.toUpperCase()) answer++; 
+}
