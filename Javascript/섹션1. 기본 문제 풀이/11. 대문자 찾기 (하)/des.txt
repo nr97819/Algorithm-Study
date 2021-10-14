@@ -1,0 +1,4 @@
+for(let x of str){
+    console.log(x)
+}
+문자열을 문자 하나씩 출력하는 방법
