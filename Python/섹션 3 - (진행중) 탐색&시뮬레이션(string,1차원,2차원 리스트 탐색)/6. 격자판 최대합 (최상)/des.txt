@@ -1,6 +1,6 @@
+* 아래 두줄은 같은 코드
     arr=[list(map(int,input().split())) for _ in range(num)]
-    # arr=[list(map(int,input().split()))] * num
-* 위 두줄은 같은 코드
+    arr=[list(map(int,input().split()))] * num
 
 * 해결 방법 : 파이썬에서의 2차원 리스트에 대한 이해 부족
     -> 이를 극복
