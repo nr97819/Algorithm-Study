@@ -1,0 +1,47 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<iostream>
+using namespace std;
+
+int digit_sum(int x) {
+	int sum = 0;
+
+	while (x > 0) {
+		sum += x % 10;
+		x = x / 10;
+	}
+
+	return sum;
+}
+
+// 8:15
+int main() {
+	//freopen("input.txt", "rt", stdin);
+
+	int max = -2147000000;
+
+	int num;
+	cin >> num;
+
+	int res = 0;
+	int sum = 0;
+
+	int input;
+	for (int i = 0; i < num; i++) {
+		cin >> input;
+
+		sum = digit_sum(input);
+		if (sum > max) {
+			res = input; // 본래값
+			max = sum; // 자릿수합
+		}
+		else if (sum == max) {
+			if (input > res) {
+				res = input;
+			}
+		}
+	}
+
+	cout << res;
+
+	return 0;
+}

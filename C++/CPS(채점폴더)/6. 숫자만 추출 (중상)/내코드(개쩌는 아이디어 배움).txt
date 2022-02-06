@@ -1,0 +1,36 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<iostream>
+using namespace std;
+// 6:52
+int main() {
+	//freopen("input.txt", "rt", stdin);
+
+	int res = 0;
+	bool pass = false;
+	string input;
+	cin >> input;
+	for (int i = 0; i < input.size(); i++) {
+		int num = input[i] - 48;
+		if ((0 <= num) && (num <= 9)) {
+			if (num != 0) {
+				pass = true;
+			}
+
+			if(pass){
+				res = res * 10 + num;
+			}
+		}
+	}
+	
+	cout << res << endl;
+
+	int cnt = 0;
+	for (int i = 1; i <= res; i++) {
+		if (res % i == 0)
+			cnt++;
+	}
+
+	cout << cnt;
+
+	return 0;
+}

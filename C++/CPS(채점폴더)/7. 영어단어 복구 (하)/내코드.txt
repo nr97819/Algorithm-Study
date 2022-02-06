@@ -1,0 +1,29 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<iostream>
+using namespace std;
+
+// 6:19
+int main() {
+	//freopen("input.txt", "rt", stdin);
+	char input[100] = { '\0' };
+	char result[100] = { '\0' };
+	int cnt = 0;
+
+	gets_s(input);
+
+	for (int i = 0; input[i] != '\0'; i++)
+	{
+		if (input[i] == ' ')
+			continue;
+
+		if (65 <= input[i] && input[i] <= 90)
+			result[cnt++] = input[i] + 32;
+		else
+			result[cnt++] = input[i];
+	}
+
+	for (int i = 0; result[i] != '\0'; i++)
+		cout << result[i];
+
+	return 0;
+}

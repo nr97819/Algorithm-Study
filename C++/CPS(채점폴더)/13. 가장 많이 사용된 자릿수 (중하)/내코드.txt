@@ -1,0 +1,37 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<iostream>
+using namespace std;
+
+// 7:41 ~ 8:04
+int main() {
+	//freopen("input.txt", "rt", stdin);
+	string str;
+	cin >> str;
+
+	int arr[10] = { 0 };
+	for (int i = 0; i < str.length(); i++) {
+		int temp = str[i] - 48; // ASCII
+		arr[temp]++;
+	}
+
+	//cout << '0'-0 << " " << '9'-0 << endl;
+
+	int maxNum = 0;
+	int maxCount = 0;
+	int maxIndex = 0;
+	for (int i = 0; i < 10; i++) {
+		if (maxCount < arr[i]) {
+			maxCount = arr[i];
+			maxIndex = i;
+		}
+		else if (maxCount == arr[i]) {
+			if (maxIndex < i) {
+				maxIndex = i;
+			}
+		}
+	}
+
+	cout << maxIndex;
+
+	return 0;
+}

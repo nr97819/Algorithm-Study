@@ -1,0 +1,29 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<iostream>
+using namespace std;
+
+// 1:17 ~ 2:16
+int main() {
+	//freopen("input.txt", "rt", stdin);
+	int num;
+	cin >> num;
+	int d = 9;
+	int logicVal = 0;
+	int cnt = 1;
+
+	int res = 0;
+
+	while (num > logicVal+d) {
+		res += d * cnt;
+		logicVal += d; // 9, 90, 900, ...
+
+		d *= 10; // 90, 900, ...
+		cnt++;
+	}
+	// 나머지 처리
+	res += (num - logicVal) * cnt;
+
+	cout << res;
+
+	return 0;
+}

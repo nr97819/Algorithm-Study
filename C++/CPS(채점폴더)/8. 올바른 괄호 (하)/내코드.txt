@@ -1,0 +1,29 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<iostream>
+using namespace std;
+
+// 7:40
+int main() {
+	freopen("input.txt", "rt", stdin);
+
+	int cnt = 0;
+	char input[100] = "";
+	cin >> input;
+	for (int i = 0; input[i] != 0; i++) {
+		if (input[i] == '(')
+			cnt++;
+		if (input[i] == ')')
+			cnt--;
+
+		if (cnt < 0) {
+			cout << "NO";
+			return 0;
+		}
+	}
+	if (cnt == 0)
+		cout << "YES";
+	else
+		cout << "NO";
+
+	return 0;
+}
